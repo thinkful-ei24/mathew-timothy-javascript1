@@ -6,8 +6,12 @@ function getYearOfBirth(age) {
 
 function createGreeting(name, age) {
     
-    if (!age || !name) {
-        throw new Error('Arguments not valid');
+    // if (!age || !name) {
+    //     throw new Error('Arguments not valid');
+    // }
+
+    if (name === undefined || age === undefined) {
+        throw new Error('Arguments not valid.');
     }
 
     if (typeof age !== 'number') {
@@ -23,6 +27,6 @@ function createGreeting(name, age) {
     return `Hi, my name is ${name} and I am ${age} years old. I was born in ${yearOfBirth}.`;
 }
 
-const greeting = createGreeting('Matt', "29");
+const greeting = createGreeting(0, 0);
 
 console.log(greeting);
