@@ -1,9 +1,9 @@
 'use strict';
 
-function createGreeting() {
-    return 'Hi, my name is Matt and I am 36 years old.';
+function createGreeting(name, age) {
+    return `Hi, my name is ${name} and I am ${age} years old.`;
 }
 
-const greeting = createGreeting();
+const greeting = createGreeting('Matt', 37);
 
 console.log(greeting);
