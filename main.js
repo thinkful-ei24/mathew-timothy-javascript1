@@ -10,6 +10,10 @@ function createGreeting(name, age) {
         throw new Error('Arguments not valid');
     }
 
+    if (typeof age !== 'number') {
+        throw new Error('This is not a number');
+    }
+
     if (age < 0) {
         throw new Error('Age cannot be negative');
     }
@@ -19,6 +23,6 @@ function createGreeting(name, age) {
     return `Hi, my name is ${name} and I am ${age} years old. I was born in ${yearOfBirth}.`;
 }
 
-const greeting = createGreeting('Matt');
+const greeting = createGreeting('Matt', "29");
 
 console.log(greeting);
